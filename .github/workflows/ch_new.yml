@@ -45,6 +45,8 @@ jobs:
     timeout-minutes: 360
     runs-on: ubuntu-latest
     steps:
+    - name: Echo hostname
+      run: echo `hostname -f`
     - uses: actions/checkout@v3
     - name: Set up JDK ${{ matrix.profile.jdk }}
       uses: actions/setup-java@v3
